@@ -13,11 +13,10 @@ public class Pizza {
 
     public void prepare()
     {
-        log.info("Prepaing: "+name+"..");
+        log.info("Preparing: "+name+"..");
         log.info("Using Dough: "+dough+"...");
         log.info("Using sauce: "+sauce+"...");
         log.info("Using toppings: "+toppings.stream().reduce((topping1, topping2)->(topping1+", "+topping2)).get());
-        ;
     }
 
     public void bake()
