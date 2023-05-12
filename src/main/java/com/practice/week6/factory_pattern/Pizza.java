@@ -7,8 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
-public class Pizza {
-     String name, sauce, dough;
+public abstract class Pizza{
+    String name = null;
+    String sauce=null;
+    String dough=null;
     List<String> toppings = new ArrayList<>();
 
     public void prepare()

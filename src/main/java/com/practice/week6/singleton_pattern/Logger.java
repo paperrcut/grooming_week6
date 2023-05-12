@@ -11,13 +11,12 @@ public class Logger {
         message = msg;
     }
 
-    synchronized public static Logger getInstance(String msg) {
+    public synchronized static Logger getInstance(String msg) {
         if (instance == null) {
             instance = new Logger(msg);
         }
         return instance;
     }
-
     public void printLog() {
 
         log.info(message);
