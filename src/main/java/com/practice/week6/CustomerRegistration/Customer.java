@@ -11,6 +11,7 @@ public class Customer {
 
     @Id
     @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(name = "Name")
@@ -21,7 +22,5 @@ public class Customer {
 
     @Column(name = "Email")
     private String email;
-
-
 
 }

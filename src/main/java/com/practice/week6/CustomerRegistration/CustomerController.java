@@ -3,7 +3,6 @@ package com.practice.week6.CustomerRegistration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,7 +21,7 @@ public class CustomerController {
 
     @PostMapping("/saveAll")
     public ResponseEntity<String> saveCustomer(@RequestBody List<Customer> customer){
-        return ResponseEntity.ok().body(customerService.saveAllCustomer(customer));
+        return ResponseEntity.ok().body(customerService.saveAllCustomers(customer));
     }
 
     @GetMapping("/get")
